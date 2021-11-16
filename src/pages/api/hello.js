@@ -1,5 +1,8 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { dbConnect, server } from "../../utils/mongoose";
+
+dbConnect();
 
 export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
+  res.status(200).json("hola");
+  // MONGODB_URL=mongodb://localhost:27017/tablerodetareas
 }

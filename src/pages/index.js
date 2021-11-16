@@ -1,10 +1,10 @@
 import React from "react";
-const { ApolloServer } = require("apollo-server");
-const typeDefs = require("../../gql/schema");
-const resolvers = require("../../gql/resolver");
-import { dbConnect } from "../utils/mongoose";
+// import typeDefs from "../../gql/schema";
+// import resolvers from "../../gql/resolver";
+// import dbConnect from "../utils/mongoose";
 
-dbConnect();
+  
+
 
 export default function HomePage() {
   function server() {
@@ -20,6 +20,7 @@ export default function HomePage() {
   return (
     <div>
       <h1>Hola</h1>
+      
     </div>
   );
 }
