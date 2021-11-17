@@ -1,9 +1,9 @@
 const resolver = {
   Query: {
     // User
-    getUser: () => {
+    allUser: () => {
       return null;
-    },
+    }
   },
 };
 

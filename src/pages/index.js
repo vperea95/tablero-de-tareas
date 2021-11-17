@@ -1,25 +1,35 @@
 import React from "react";
-// import typeDefs from "../../gql/schema";
-// import resolvers from "../../gql/resolver";
-// import dbConnect from "../utils/mongoose";
-
-  
-
+import {ApolloServer} from 'apollo-server'
+import typeDefs from "../../gql/schema";
+import resolvers from "../../gql/resolver";
+import dbConnect from "../utils/mongoose";
 
 export default function HomePage() {
-  function server() {
-    const serverApollo = new ApolloServer({
+  
+    const server = new ApolloServer({
       typeDefs,
       resolvers,
-    });
+    })
 
-    serverApollo.listen().then(({ url }) => {
+    server.listen().then(({url}) => {
       console.log(`Servidor en la url ${url}`);
-    });
-  }
+    })
+  
   return (
     <div>
-      <h1>Hola</h1>
+    <table border='solid 1px'>
+      <thead>
+          <tr>
+              <th colSpan='2'>The table header</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>The table body</td>
+              <td>with two columns</td>
+          </tr>
+      </tbody>
+</table>
       
     </div>
   );
